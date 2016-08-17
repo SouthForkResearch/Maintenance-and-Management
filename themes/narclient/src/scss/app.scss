@@ -1,0 +1,80 @@
+@import "variables";
+@import "bootstrap";
+// SOLARIZED
+@import "font-awesome";
+@import "solarized-light";
+
+// This is only used to demo where the grid is on a foundation grid
+.showgrid{
+  .row{ 
+    border: 1px dashed #666;
+  }
+  .column, .columns{ 
+    border: 1px solid #aaa;
+    background-color: #ccc;
+  }
+}
+
+article table{ 
+  @extend .table;
+}
+
+.sidebar-toc{
+  ul { @extend .nav; }
+  ul ul{
+    margin-left: 0.5rem;
+    li a { font-size: 0.9; }
+  }
+  li {
+    @extend .nav-item;
+  }
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+@for $i from 1 through 10 {
+  li.indent#{$i} {
+    padding-left: 0.7rem * ($i - 1);
+  }
+}
+
+main .nav.tree{
+  .nav-item{
+    .fa:before {
+      padding-right: 10px;
+    }
+    &.dir span{
+      margin-top: 0.5rem;
+      font-size: 120%;
+      display: block;
+    }
+  }
+}
+
+.navbar-nav i.fa:before{
+  margin-right: 8px;
+}
+
+#exCollapsingNavbar {
+  h4{
+    border-bottom: 1px solid darken(white, 10%);
+    text-transform: capitalize;
+  }
+  .fa:before {
+    padding-right: 10px;
+  }
+  .nav.tree{
+    .nav-item{
+      a:hover{ color: white; }
+      &.dir span{
+        text-transform: capitalize;
+        margin-top: 8px;
+        display: block;
+        color: darken(white, 40%);
+        font-size: 120%
+      }
+    }
+  }
+}

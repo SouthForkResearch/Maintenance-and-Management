@@ -1,0 +1,17 @@
+<div class="breadcrumbs">
+{{if ne .Source.Dir ""}}
+  <span><a href="/">Home</a><span>
+  {{ $arr := split .Source.Dir "/" }}
+  {{ range $index, $name := $arr }}
+    {{if ne $name ""}}
+      <span>/</span>
+      {{if eq 1 1}}
+      <span>{{$name}}<span>
+      {{else}}
+      <span>{{$name}}<span>
+      {{end}}
+    {{end}}
+  {{end}}
+{{end}}
+</div>
+

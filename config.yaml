@@ -1,0 +1,32 @@
+﻿---
+baseurl: "http://template-wiki.s3-website-us-west-2.amazonaws.com" #no end slash
+title: "Confinement Tool"
+footnotereturnlinkcontents: "↩"
+permalinks:
+  post: /:year/:month/:title/
+params:
+  description: "Our Docs!"
+  sectionsAsMenus: 1 
+  AuthorName: "John Doe"
+
+# Non automatic menu items
+menu:
+  main:
+      - Name: "About"
+        Pre: "<i class='fa fa-info-circle'></i>"
+        Weight: 0
+        Identifier: "about"
+        URL: "/about/"
+      - Name: "Meta"
+        Pre: "<i class='fa fa-life-ring'></i>"
+        Weight: 1
+        URL: "/metadocs/"
+      - Name: "Style"
+        Pre: "<i class='fa fa-hashtag'></i>"
+        Weight: 2
+        URL: "/style/"
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  series: "series"

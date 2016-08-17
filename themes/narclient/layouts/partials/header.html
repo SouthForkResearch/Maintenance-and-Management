@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{{ $baseUrl := .Site.BaseURL }}
+{{ $isHomePage := eq .Title .Site.Title }}
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}">
+		<link rel="icon" href="{{ $baseUrl }}/favicon.ico">
+		<title>{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
+		<!--<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">-->
+		<link rel="stylesheet" href="{{ $baseUrl }}/css/app.css">
+    <link rel="stylesheet" href="{{ $baseUrl }}/css/extra.css">
+	</head>
+
+<body role="document">
+	<nav class="navbar navbar-dark bg-primary">
+    <ul class="nav navbar-nav">
+        <li class="nav-item"><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+        &#9776;
+        </button></li>
+    </ul>
+		<a class="navbar-brand" href="{{ $baseUrl }}/">{{ .Site.Title }}</a>
+		<ul class="nav navbar-nav">
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.main }}
+        <li class="nav-item{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}">
+        <a class="nav-link" href="{{.URL}}">{{.Pre}}{{ .Name }}</a>
+
+        </li>
+        {{ end }}
+		</ul>
+	</nav>
+
+<div class="collapse" id="exCollapsingNavbar">
+  <div class="row bg-inverse p-a-1">
+    <h4>Site Map</h4>
+    <!-- Loop over sections first -->
+    {{ range $name, $el := .Site.Sections }}
+      <div class="col-sm-6 col-xs-12 col-md-4 col-lg-3 bg-inverse p-a-1">
+            {{if ne $name ""}}
+              <h4 class="card-title">{{ replace $name "_" " "}}</h4>
+            {{end}}
+            <ul class="nav tree">
+              <!-- Set up levels that we use for indents -->
+              {{ $.Scratch.Set "level" 0 }}
+              {{ $.Scratch.Set "leaflevel" 0 }}
+              {{ $.Scratch.Set "name" $name }}
+
+              <!-- Loop over pages sorted by DIR -->
+              {{ range sort .Pages "Source.Dir" "asc"}}
+                <!-- split the DIR using "/" -->
+                {{ $arr := split .Source.Dir "/" }}
+                <!-- Now loop over our split array-->
+                {{ range $index, $name := $arr }}
+                  <!-- Already have the root in the H4 above -->
+                  {{if and (ne $name "") (gt $index 0) }}
+
+                    {{if gt $index ($.Scratch.Get "level") }}
+                      {{ $.Scratch.Set "level" $index}}
+                      {{ $.Scratch.Set "name" $name }}
+                      <li class="nav-item dir indent{{$.Scratch.Get "level"}}"><span class="fa fa-folder-open">{{ replace $name "_" " "}}</span></li>
+                    {{end}}
+
+                    {{if and (eq $index ($.Scratch.Get "level")) ( ne ($.Scratch.Get "name") $name) }}
+                      {{ $.Scratch.Set "level" $index}}
+                      {{ $.Scratch.Set "name" $name }}
+                      <li class="nav-item dir indent{{$.Scratch.Get "level"}}"><span class="fa fa-folder-open">{{ replace $name "_" " "}}</span></li>
+                    {{end}}
+                    
+                  {{end}} <!-- if -->
+                  {{ $.Scratch.Set "leaflevel" $index}}
+                {{ end }} <!-- range -->
+                <li class="nav-item indent{{$.Scratch.Get "leaflevel"}}">
+                  <a class="nav-link bg-inverse fa fa-file-text" href="{{ .Permalink }}">{{.Title}}</a>
+                </li>
+              {{ end }} <!-- range -->
+            </ul>
+      </div>
+    {{ end }} <!-- range -->
+  </div>
+</div>
+
+<div class="container">

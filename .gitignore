@@ -1,0 +1,16 @@
+### Temporary Files / OS Files ###
+.sass-cache
+*.DS_Store
+Thumbs.db
+public
+ehthumbs.db
+.bundle/install.log
+Desktop.ini
+$RECYCLE.BIN/
+*.log
+*.exe
+
+## Compiled Assets ##
+_site
+node_modules
+bower_components

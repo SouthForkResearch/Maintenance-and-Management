@@ -1,0 +1,64 @@
+{{ $baseUrl := .Site.BaseURL }}
+{{ partial "header.html" . }}
+
+<main role="main">
+
+<div class="row">
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <h1 class="display-3">{{ .Site.Title }}</h1>
+    <p class="lead">{{ if isset .Site.Params "description" }}{{ .Site.Params.description }}{{ else }}You can customize this text by params "description" in your <code>config.toml</code>.{{ end }}</p>
+  </div>
+</div>
+
+<div class="row">
+    <!-- Loop over sections first -->
+    {{ range $name, $el := .Site.Sections }}
+      <div class="col-sm-6">
+        <div class="card card-block">
+            <h4 class="card-title">{{ replace $name "_" " "}}</h4>
+            <ul class="nav tree">
+              <!-- Set up levels that we use for indents -->
+              {{ $.Scratch.Set "level" 0 }}
+              {{ $.Scratch.Set "leaflevel" 0 }}
+              {{ $.Scratch.Set "name" $name }}
+
+              <!-- Loop over pages sorted by DIR -->
+              {{ range sort .Pages "Source.Dir" "asc"}}
+                <!-- split the DIR using "/" -->
+                {{ $arr := split .Source.Dir "/" }}
+                <!-- Now loop over our split array-->
+                {{ range $index, $name := $arr }}
+                  <!-- Already have the root in the H4 above -->
+                  {{if and (ne $name "") (gt $index 0) }}
+
+                    {{if gt $index ($.Scratch.Get "level") }}
+                      {{ $.Scratch.Set "level" $index}}
+                      {{ $.Scratch.Set "name" $name }}
+                      <li class="nav-item dir indent{{$.Scratch.Get "level"}}"><span class="fa fa-folder-open-o">{{ replace $name "_" " "}}<span></li>
+                    {{end}}
+
+                    {{if and (eq $index ($.Scratch.Get "level")) ( ne ($.Scratch.Get "name") $name) }}
+                      {{ $.Scratch.Set "level" $index}}
+                      {{ $.Scratch.Set "name" $name }}
+                      <li class="nav-item dir indent{{$.Scratch.Get "level"}}"><span class="fa fa-folder-open-o">{{ replace $name "_" " "}}<span></li>
+                    {{end}}
+                    
+                  {{end}} <!-- if -->
+                  {{ $.Scratch.Set "leaflevel" $index}}
+                {{ end }} <!-- range -->
+                <li class="nav-item indent{{$.Scratch.Get "leaflevel"}}">
+                  <a class="nav-link fa fa-file-text" href="{{ .Permalink }}">{{.Title}}</a>
+                </li>
+              {{ end }} <!-- range -->
+            </ul>
+        </div>
+      </div>
+    {{ end }} <!-- range -->
+</div>
+
+
+
+</main>
+
+{{ partial "footer.html" . }}

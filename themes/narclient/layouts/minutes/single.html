@@ -1,0 +1,43 @@
+{{ partial "header.html" . }}
+
+<div class="row">
+	<div class="col-md-8 doc-main">
+		<main role="main">
+			<article>
+                {{ .Render "breadcrumbs" }}
+				<a id="title"></a>
+				<h1 class="doc-entry-title">{{ .Title }}</h1>
+				<div class="doc-entry-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time>
+				</div>
+				<section>
+					{{ .Content }}
+				</section>
+				<div class="bottom-nav row">
+            <div class="prev col-sm-6 text-xs-left">
+                {{ if .Prev }}
+                <a href="{{ .Prev.Permalink }}">
+                    <i class="fa fa-chevron-left"></i>
+                    {{ .Prev.Title }}
+                </a>
+                {{ end }}
+            </div>
+            <div class="next col-sm-6 text-xs-right">
+                {{ if .Next }}
+                <a href="{{ .Next.Permalink }}">
+                    {{ .Next.Title }}
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+                {{ end }}
+            </div>
+				</div>
+
+			</article>
+		</main>
+	</div> <!-- /.doc-main -->
+
+	{{ partial "sidebar-post.html" . }}
+
+</div> <!-- /.row -->
+
+{{ partial "footer.html" . }}
