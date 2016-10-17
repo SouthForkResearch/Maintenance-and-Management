@@ -167,12 +167,25 @@
 					<li>Download either the Metric_Engine_Status.mdb from Data Exports</li>
 					<li>Go to the Reports menu option, Select Metric Engine Status, then RBT Orthogonal tab. On the upper right of that page select download data.</li>
 				</ol>
-			<li>In the Metric_Engine_Status.mdb, open the VisitEngines table.</li>
-			<li>Under RBT_Status field, Select Completed Successfully</li>
-			<li>Sort RBT_LastRequested in Descending order and Select the VisitIDs from the date of the last run.</li>
-			<li>Copy the list of Visit Ids to a text editor.</li>
-			<li>Add a comma after each number except for the last one.</li>
-			<li>Save the file as a *.csv.</li>
+			<li>Compile List from Metric_Engine_Status.mdb.</li>
+				<ol type = "a">
+					<li>In the Metric_Engine_Status.mdb, open the VisitEngines table.</li>
+					<li>Under RBT_Status field, Select Completed Successfully</li>
+					<li>Sort RBT_LastRequested field in Descending order and Select the VisitIDs from the date of the last run.</li>
+					<li>Copy the list of Visit Ids to a text editor.</li>
+					<li>Add a comma after each number except for the last one.</li>
+					<li>Save the file as a *.csv.</li>
+				</ol>
+			<li>Compile List from Metric Engine Status Report.</li>
+				<ol type = "a">
+					<li>Open the downloaded METRICSSTATUS_yyyy_ORTHOGONAL.csv file.</li>
+					<li>Set a filter on the top row.</li>
+					<li>Select Completed Successfully under the Status field.</li>
+					<li>Sort LastRequested field in Descending order and Select the VisitIDs from the date of the last run.</li>
+					<li>Copy the list of Visit Ids to a text editor.</li>
+					<li>Add a comma after each number except for the last one.</li>
+					<li>Save the file as a *.csv.</li>
+				</ol>					
 		</ol>
 	<li style="font-size:125%">Run RBT Validation</li>
 		<ol type = "1">
