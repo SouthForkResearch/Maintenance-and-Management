@@ -3,22 +3,21 @@
 <h1>How to Run RBT and Associated tools Locally using Data from AWS</h1>
 
 <h2>General Notes</h2>
-<ol>
-	<li>If you are running a lot of visits via Batch runs, make sure you set your computer HD to not sleep.</li>
-	<li>RBT creates one folder in the RBTTempFolder for every visit run.</li>
-	<li>Estimating time to completion:</li>
-		<ul>
-			<li>Running a visit can take anywhere between 3 and 90 minutes depending on how complicated the visit is</li>
-		</ul>
-	<li>When you are finished running a set of data, you should delete all files in the RBT Temp Folder as these files can take a lot of space in you HD up to 1.5 GB per folder.</li>
-	<li>You need to ensure you have enough space on your HD to run the visits you are planning.</li>
-	<li>Windows Updates will also halt progress.</li>
-	<li>You cannot access the Workbench.mdb while RBT is running.</li>
-	<li>Running visits with GCD and metrics calculations increases the time it takes to complete.</li>
-	<li>In order for a visit to be available on AWS is must pass the RBT Orthogonal engine on champmonitoring.org.</li>
-</ol>
+	<ol>
+		<li>If you are running a lot of visits via Batch runs, make sure you set your computer HD to not sleep.</li>
+		<li>RBT creates one folder in the RBTTempFolder for every visit run.</li>
+		<li>Estimating time to completion:</li>
+			<ul>
+				<li>Running a visit can take anywhere between 3 and 90 minutes depending on how complicated the visit is</li>
+			</ul>
+		<li>When you are finished running a set of data, you should delete all files in the RBT Temp Folder as these files can take a lot of space in you HD up to 1.5 GB per folder.</li>
+		<li>You need to ensure you have enough space on your HD to run the visits you are planning.</li>
+		<li>Windows Updates will also halt progress.</li>
+		<li>You cannot access the Workbench.mdb while RBT is running.</li>
+		<li>Running visits with GCD and metrics calculations increases the time it takes to complete.</li>
+		<li>In order for a visit to be available on AWS is must pass the RBT Orthogonal engine on champmonitoring.org.</li>
+	</ol>
 
-<hr>
 <hr>
 
 <h2>Prep Data</h2>
@@ -278,63 +277,62 @@
 </br>
 
 <h2>Sync Data to AWS</h2>
-	<ol type = "A">
-		<li style="font-size:125%">Update Output file name structure to match AWS</li>
-			<ol type = "a">
-				<li>Open a CMD window</li>
-				<li>At the prompt type: python D:\Tools\RenameRBTMetricsResults.py </br>
-					D:\CHaMP\Processing\InputOutputMetrics\</li>
-				<li>Hit Enter</li>
-				<li>The script will show a prompt when it is complete</li>
-			</ol>
+<ol type = "A">
+	<li style="font-size:125%">Update Output file name structure to match AWS</li>
+		<ol type = "a">
+			<li>Open a CMD window</li>
+			<li>At the prompt type: python D:\Tools\RenameRBTMetricsResults.py D:\CHaMP\Processing\InputOutputMetrics\</li>
+			<li>Hit Enter</li>
+			<li>The script will show a prompt when it is complete</li>
+		</ol>
 </br>
-		<li style="font-size:125%">Upload data to AWS</li>
-			<ol type = "a">
-				<li>In the AWS_Batch folder</li>
-				<li>Double click on Upload_RBTMetrics.bat</li>
-				<li>A cmd window will open</li>
-				<li>Hit Enter</li>
-				<li>You will see a line of code and a flashing cursor for a few minutes then you will see file paths added to the screen until the script is done</li>
-				<li>When it is finished, close the window.</li>
-			</ol>
-	</ol>
+	<li style="font-size:125%">Upload data to AWS</li>
+		<ol type = "a">
+			<li>In the AWS_Batch folder</li>
+			<li>Double click on Upload_RBTMetrics.bat</li>
+			<li>A cmd window will open</li>
+			<li>Hit Enter</li>
+			<li>You will see a line of code and a flashing cursor for a few minutes then you will see file paths added to the screen until the script is done</li>
+			<li>When it is finished, close the window.</li>
+		</ol>
+
+
 </br>
-<hr>
-</br>
-		<li style="font-size:125%">Check AWS for uploaded data</li>
-			<ol type = "a">
-				<li>Log in to AWS at: https://nar.signin.aws.amazon.com/console</li>
-				<li>Under the Amazon Web Services main page, under Storage and Content Delivery. Select the S3 option</li>
-				<li>You should see a list of Buckets for CHaMP and AEM.</li>
-				<li>Select either champdata or aemdata.</li>
-				<li>Select the QA folder and you will see a list of years.</li>
-				<li>The data from here is the same as your local storage (Year/Watershed/SiteID/VisitID/)</li>
-				<li>Once you in the visit id folder you will see 2 folders, Hydro and RBT.</li>
-				<li>h.	In the RBT folder the outputs from the rBT run should be present.</li>
-			</ol>
+	<li style="font-size:125%">Check AWS for uploaded data</li>
+		<ol type = "a">
+			<li>Log in to AWS at: https://nar.signin.aws.amazon.com/console</li>
+			<li>Under the Amazon Web Services main page, under Storage and Content Delivery. Select the S3 option</li>
+			<li>You should see a list of Buckets for CHaMP and AEM.</li>
+			<li>Select either champdata or aemdata.</li>
+			<li>Select the QA folder and you will see a list of years.</li>
+			<li>The data from here is the same as your local storage (Year/Watershed/SiteID/VisitID/)</li>
+			<li>Once you in the visit id folder you will see 2 folders, Hydro and RBT.</li>
+			<li>h.	In the RBT folder the outputs from the rBT run should be present.</li>
+		</ol>
+</ol>
 </br>
 <hr>
 </br>
 		
 <h2>Troubleshooting</h2>
-	<ol type = "A">
-		<li style="font-size:125%">Not all Visits load to created RBT File</li>
-			<ol type = "1">
-				<li>Visit has an issue that prevents it to load</li>
-					<ol type = "a">
-						<li>Run visit through CHaMP toolbar to see where the error is.</li>
-						<li>Repair and retry</li>
-					</ol>
-				<li>Visit is not in the All_Measurements database</li>
-					<ol type = "a">
-						<li>Download a new database from CHaMP monitoring or AEM monitoring</li>
-					</ol>
-			</ol>
+<ol type = "A">
+	<li style="font-size:125%">Not all Visits load to created RBT File</li>
+		<ol type = "1">
+			<li>Visit has an issue that prevents it to load</li>
+				<ol type = "a">
+					<li>Run visit through CHaMP toolbar to see where the error is.</li>
+					<li>Repair and retry</li>
+				</ol>
+			<li>Visit is not in the All_Measurements database</li>
+				<ol type = "a">
+					<li>Download a new database from CHaMP monitoring or AEM monitoring</li>
+				</ol>
+		</ol>
 </br>
-		<li style="font-size:125%">In Workbench Log table, visit did not process correctly.</li>
-			<ol type = "1">
-				<li>Check the Log.xml file for the visit</li>
-				<li>If it was a software issue, like an ESRI license problem. Rerun the visit.</li>
-				<li>When loading data to AWS, if when you click on the Upload_RBTMetrics.bat file and the cmd window opens then closes right away. Check you file path</li>
-			</ol>
-	</ol>
+	<li style="font-size:125%">In Workbench Log table, visit did not process correctly.</li>
+		<ol type = "1">
+			<li>Check the Log.xml file for the visit</li>
+			<li>If it was a software issue, like an ESRI license problem. Rerun the visit.</li>
+			<li>When loading data to AWS, if when you click on the Upload_RBTMetrics.bat file and the cmd window opens then closes right away. Check you file path</li>
+		</ol>
+</ol>
