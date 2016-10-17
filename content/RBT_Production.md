@@ -155,6 +155,14 @@
 
 <h2>Run RBT</h2>
 <ol type = "A">
+	<li style="font-size:125%">Compile list of Visits to Run</li>
+		<ol type = "1">
+			<li>If you only need to run a subset of visits follow one of the two procedures below to get a list of visits, otherwise select all visits and run RBT.</li>
+				<ol type = "a">			
+					<li>Download either the Metric_Engine_Status.mdb from Data Exports</li>
+					<li>Go to the Reports menu option, Select Metric Engine Status, then RBT Orthogonal tab. On the upper right of that page select download data.</li>
+				</ol>
+			<li>
 	<li style="font-size:125%">Run RBT Validation</li>
 		<ol type = "1">
 			<li>Prep list of visits to run</li>
