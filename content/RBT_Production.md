@@ -157,6 +157,11 @@
 <ol type = "A">
 	<li style="font-size:125%">Compile list of Visits to Run</li>
 		<ol type = "1">
+			<li>Prep list of visits to run</li>
+				<ol type = "a">
+					<li>You can run by year and\or watershed for all visits</li>
+					<li>Or you can prepare a .csv file for a specific set of data.</li>
+				</ol>
 			<li>If you only need to run a subset of visits follow one of the two procedures below to get a list of visits, otherwise select all visits and run RBT.</li>
 				<ol type = "a">			
 					<li>Download either the Metric_Engine_Status.mdb from Data Exports</li>
@@ -171,11 +176,6 @@
 		</ol>
 	<li style="font-size:125%">Run RBT Validation</li>
 		<ol type = "1">
-			<li>Prep list of visits to run</li>
-				<ol type = "a">
-					<li>You can run by year and\or watershed for all visits</li>
-					<li>Or you can prepare a .csv file for a specific set of data.</li>
-				</ol>
 			<li>The data output folder is: \Processing\InputOutputValidation\</li>
 			<li>Clean out RBT_Temp folder</li>
 			<li>Menu: Tools</li>
@@ -204,11 +204,6 @@
 </br>
 	<li style="font-size:125%">Run RBT Metrics</li>
 		<ol type = "1">
-			<li>Prep list of visits to run</li>
-				<ol type = "a">
-					<li>You can run by year and\or watershed for all visits</li>
-					<li>Or you can prepare a .csv file for a specific set of data.</li>
-				</ol>
 			<li>Input output folder: \Processing\InputOutputMetrics\</li>
 			<li>Clean out RBT_Temp folder</li>
 			<li>Menu: Tools</li>
