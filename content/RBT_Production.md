@@ -282,7 +282,8 @@
 		<li style="font-size:125%">Update Output file name structure to match AWS</li>
 			<ol type = "a">
 				<li>Open a CMD window</li>
-				<li>At the prompt type: python D:\Tools\RenameRBTMetricsResults.py D:\CHaMP\Processing\InputOutputMetrics\</li>
+				<li>At the prompt type: python D:\Tools\RenameRBTMetricsResults.py </br>
+					D:\CHaMP\Processing\InputOutputMetrics\</li>
 				<li>Hit Enter</li>
 				<li>The script will show a prompt when it is complete</li>
 			</ol>
