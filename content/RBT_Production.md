@@ -311,6 +311,9 @@
 				<li>Once you in the visit id folder you will see 2 folders, Hydro and RBT.</li>
 				<li>h.	In the RBT folder the outputs from the rBT run should be present.</li>
 			</ol>
+</br>
+<hr>
+</br>
 		
 <h2>Troubleshooting</h2>
 	<ol type = "A">
