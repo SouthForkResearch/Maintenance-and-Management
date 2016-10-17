@@ -3,20 +3,20 @@
 <h1>How to Run RBT and Associated tools Locally using Data from AWS</h1>
 
 <h2>General Notes</h2>
-	<ol>
-		<li>If you are running a lot of visits via Batch runs, make sure you set your computer HD to not sleep.</li>
-		<li>RBT creates one folder in the RBTTempFolder for every visit run.</li>
-		<li>Estimating time to completion:</li>
-			<ul>
-				<li>Running a visit can take anywhere between 3 and 90 minutes depending on how complicated the visit is</li>
-			</ul>
-		<li>When you are finished running a set of data, you should delete all files in the RBT Temp Folder as these files can take a lot of space in you HD up to 1.5 GB per folder.</li>
-		<li>You need to ensure you have enough space on your HD to run the visits you are planning.</li>
-		<li>Windows Updates will also halt progress.</li>
-		<li>You cannot access the Workbench.mdb while RBT is running.</li>
-		<li>Running visits with GCD and metrics calculations increases the time it takes to complete.</li>
-		<li>In order for a visit to be available on AWS is must pass the RBT Orthogonal engine on champmonitoring.org.</li>
-	</ol>
+<ol>
+	<li>If you are running a lot of visits via Batch runs, make sure you set your computer HD to not sleep.</li>
+	<li>RBT creates one folder in the RBTTempFolder for every visit run.</li>
+	<li>Estimating time to completion:</li>
+		<ul>
+			<li>Running a visit can take anywhere between 3 and 90 minutes depending on how complicated the visit is</li>
+		</ul>
+	<li>When you are finished running a set of data, you should delete all files in the RBT Temp Folder as these files can take a lot of space in you HD up to 1.5 GB per folder.</li>
+	<li>You need to ensure you have enough space on your HD to run the visits you are planning.</li>
+	<li>Windows Updates will also halt progress.</li>
+	<li>You cannot access the Workbench.mdb while RBT is running.</li>
+	<li>Running visits with GCD and metrics calculations increases the time it takes to complete.</li>
+	<li>In order for a visit to be available on AWS is must pass the RBT Orthogonal engine on champmonitoring.org.</li>
+</ol>
 
 <hr>
 
