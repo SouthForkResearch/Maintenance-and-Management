@@ -300,6 +300,18 @@
 </br>
 <hr>
 </br>
+		<li style="font-size:125%">Check AWS for uploaded data</li>
+			<ol type = "a">
+				<li>Log in to AWS at: https://nar.signin.aws.amazon.com/console</li>
+				<li>Under the Amazon Web Services main page, under Storage and Content Delivery. Select the S3 option</li>
+				<li>You should see a list of Buckets for CHaMP and AEM.</li>
+				<li>Select either champdata or aemdata.</li>
+				<li>Select the QA folder and you will see a list of years.</li>
+				<li>The data from here is the same as your local storage (Year/Watershed/SiteID/VisitID/)</li>
+				<li>Once you in the visit id folder you will see 2 folders, Hydro and RBT.</li>
+				<li>h.	In the RBT folder the outputs from the rBT run should be present.</li>
+			</ol>
+		
 <h2>Troubleshooting</h2>
 	<ol type = "A">
 		<li style="font-size:125%">Not all Visits load to created RBT File</li>
