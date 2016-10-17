@@ -162,7 +162,13 @@
 					<li>Download either the Metric_Engine_Status.mdb from Data Exports</li>
 					<li>Go to the Reports menu option, Select Metric Engine Status, then RBT Orthogonal tab. On the upper right of that page select download data.</li>
 				</ol>
-			<li>
+			<li>In the Metric_Engine_Status.mdb, open the VisitEngines table.</li>
+			<li>Under RBT_Status field, Select Completed Successfully</li>
+			<li>Sort RBT_LastRequested in Descending order and Select the VisitIDs from the date of the last run.</li>
+			<li>Copy the list of Visit Ids to a text editor.</li>
+			<li>Add a comma after each number except for the last one.</li>
+			<li>Save the file as a *.csv.</li>
+		</ol>
 	<li style="font-size:125%">Run RBT Validation</li>
 		<ol type = "1">
 			<li>Prep list of visits to run</li>
