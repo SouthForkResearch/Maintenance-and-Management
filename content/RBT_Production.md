@@ -159,7 +159,7 @@
 		<ol type = "1">
 			<li>Prep list of visits to run</li>
 				<ol type = "a">
-					<li>You can run by year and\or watershed for all visits</li>
+					<li>You can run by year and\or watershed for all visits using the CHaMP Workbench.</li>
 					<li>Or you can prepare a .csv file for a specific set of data.</li>
 				</ol>
 			<li>If you only need to run a subset of visits follow one of the two procedures below to get a list of visits, otherwise select all visits and run RBT.</li>
