@@ -137,13 +137,13 @@
 </br>
 	<li style="font-size:125%">Run Inventory Tool</li>
 		<ol type = "1">
-			<li>This tool is located in the \Tools\DataInventoryTool folder.</li>
+			<li>This tool is located in the /Tools/DataInventoryTool folder.</li>
 			<li>In the Windows Start Menu</li>
 			<li>Type: cmd to open a command window.</li>
 				<ul>
 					<li>In command prompt window.</li>
-					<li>Type:  python D:\Tools\DataInventoryTool\Batch.py D:\CHaMP\Processing\Visit_Data\ D:\InventoryResults\Inventory_OZ_yyyymmdd.csv</li>
-					<li>Python Script to Run Source folder  Output Folder\*yyyymmdd.csv</li>
+					<li>Type:  python D:/Tools/DataInventoryTool/Batch.py D:/CHaMP/Processing/Visit_Data/ D:/InventoryResults/Inventory_OZ_yyyymmdd.csv</li>
+					<li>Python Script to Run Source folder  Output Folder/*yyyymmdd.csv</li>
 					<li>Hit Enter</li>
 				</ul>
 			<li>This can take a few hours</li>
