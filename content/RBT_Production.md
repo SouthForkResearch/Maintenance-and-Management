@@ -246,9 +246,13 @@
 </br>
 <h2>Harold</h2>
 <ol type = "A">
+	<p>
+	<li style="font-size:125%">Folder structure</li>
+		<ol type = "1">
+			<li style="font-size:125%">The Input data should be stored in the folder structure: (drive)\CHaMP\Processing\Visit_Data\(yyyy)\(watershed).</li>
+			<li style="font-size:125%">The Output data should be stored in the following folder structure: (drive)\CHaMP\Projects\Harold\Run_yyymmdd\(yyyy)\(watershed).</li>
+		</ol>	
 	<li style="font-size:125%">Open Command Prompt window.</li>
-	<li style="font-size:125%">The Input data should be stored in the folder structure: (drive)\CHaMP\Processing\Visit_Data\(yyyy)\(watershed).</li>
-	<li style="font-size:125%">The Output data should be stored in the following folder structure: (drive)\CHaMP\Projects\Harold\Run_yyymmdd\(yyyy)\(watershed).</li>
 	<li style="font-size:125%">At prompt: python \Tools\CHaMP_Survey_Data_Export_Tool\BatchExport.py \Processing\Visit_Data\(yyyy)\(watershed) \Projects\Harold\Run_yyyymdd\(yyyy)\(watershed).</li>
 </ol>
 
