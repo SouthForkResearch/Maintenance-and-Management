@@ -1,7 +1,7 @@
 <h2>CHaMP 2011 Visit Repair Process for Required Updates</h2>
-	<p>Date: November 1, 2016</br>
-	Toolbar version: 6.0.19.0.</br>
-	Created by: Jean M. Olson, South Fork Research, Inc.</p>
+<p>Date: November 1, 2016</br>
+Toolbar version: 6.0.19.0.</br>
+Created by: Jean M. Olson, South Fork Research, Inc.</p>
 
 
 <h3>Introduction</h3>
