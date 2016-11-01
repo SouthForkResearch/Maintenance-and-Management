@@ -24,7 +24,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 			<li>Wetted-Surface TIN</li>
 			<li>Survey Geodatabase (corrected) if present otherwise Survey Geodatabase (notcorrected)</li>
 		</ul>
-	<li>Another dialog box will open, Save the file. It will go to your Downloads folder.</li>
+	<li>Another dialog box will open, Save each file. They will go to your Downloads folder.</li>
 </ul>
 <h4>Channel Unit CSV</h4>
 <ul>
