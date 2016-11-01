@@ -26,6 +26,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 		</ul>
 	<li>Another dialog box will open, Save each file. They will go to your Downloads folder.</li>
 </ul>
+
 <h4>Channel Unit CSV</h4>
 <ul>
 	<li>Open the CHaMP Workbench.</li>
@@ -72,27 +73,9 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 		</ul>
 </ul>
 
-<h4>SurveyInfo Table Updates</h4>
-<ul>
-	<li>Note: The first 2 repairs listed below should be automatically completed with toolbar version 6.0.19.0, however it is a good idea to double check that this occurred with your first survey.</li>
-	<li>Open the Attribute Table and review field headings.</li>
-	<li>If field <strong>Organziation</strong> is present.</li>
-		<ul>		
-			<li>Add new field: <strong>Organization</strong> (Text, 30).</li>
-			<li>Copy any information to the field Organization.</li>
-			<li>Delete field Organziation.</li>
-		</ul>
-	<li>Add the field: <strong>FinalWSETIN</strong> <Text, 50).</li>
-	<li>Missing information in the SurveyInfo table.</li>
-		<ul>
-			<li>Start Editing the table.</li>
-			<li>If there is not at least one record in the table, Click in the SiteID field to add one.</li>
-			<li>Add the Site name to the SiteID field.</li>
-			<li>Add Watershed name to the Watershed field.</li>
-			<li>Add the Survey Year to the FieldSeason field.</li>
-			<li>Stop Editing and Save</li>
-		</ul>
-</ul>
+<h3>Open the Survey in Workflow Manager</h3>	
+
+<p>Once you have completed the steps above, you can open the visit in the Workflow Manager and run the Validate Data tool.</p>
 
 <h4>Other Missing tables</h4>
 <ul>
@@ -158,9 +141,31 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 	
 <hr>
 
-<h3>Open the Survey in Workflow Manager</h3>	
+<h4>SurveyInfo Table Updates</h4>
+<ul>
+	<li>Open the Attribute Table and review field headings.</li>
 
-<p>Once you have completed the steps above, you can open the visit in the Workflow Manager and run the Validate Data tool.</p>
+		<ul>
+			<li>Note: These 2 repairs should be automatically completed with toolbar version 6.0.19.0, however it is a good idea to double check that this occurred with your first survey.</li>
+			<li>If field <strong>Organziation</strong> is present.</li>
+				<ul>		
+					<li>Add new field: <strong>Organization</strong> (Text, 30).</li>
+					<li>Copy any information to the field Organization.</li>
+					<li>Delete field Organziation.</li>
+				</ul>
+			<li>Add the field: <strong>FinalWSETIN</strong> <Text, 50).</li>
+		</ul>
+	<li>Missing information in the SurveyInfo table.</li>
+		<ul>
+			<li>Start Editing the table.</li>
+			<li>If there is not at least one record in the table, Click in the SiteID field to add one.</li>
+			<li>Add the Site name to the SiteID field.</li>
+			<li>Add Watershed name to the Watershed field.</li>
+			<li>Add the year the survey was done to the FieldSeason field.</li>
+			<li>Add the date of the survey to the SurveyDate field.</li>
+			<li>Stop Editing and Save</li>
+		</ul>
+</ul>
 
 <h4>WaterExtent/Bankfull Updates</h4>
 <ul>
@@ -213,7 +218,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 <h4>WIslands/BIslands</h4>
 <ul>
 	<li>Open Attribute Table.</li>
-	<li>Add fields: IsQualifying (Numeric, Short) and IsValid (Numeric, Short) if they do not exist.</li>
+	<li>Add fields: Qualifying (Numeric, Short) and IsValid (Numeric, Short) if they do not exist.</li>
 </ul>
 
 <h4>Topo Points</h4>
