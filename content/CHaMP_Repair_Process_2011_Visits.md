@@ -381,7 +381,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 	<li>Append Topo_Points_New to Topo_Points.</li>
 </ul>
 
-<h4>Current Warnings to ignore</h4>
+<h4>Current Warnings to ignore. These cannot be currently repaired.</h4>
 <ul>
 	<li>Channel unit polygons extent outside the wetted extent main channel.</li>
 	<li>The Assoc3DPQ raster is missing. Only for pre-2014 surveys.</li>
@@ -391,3 +391,21 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 <hr>
 
 <h3>Reload repaired data to champmonitoring.org</h3>
+<ul>
+	<li>Once the survey is repaired, Run the <strong>Publish Final Geodatabase</strong> tool.</li>
+	<li>Check <strong>Republish Survey</strong> option.</li>
+	<li>Make sure the most recent WSETIN file is selected to be zipped.</li>
+	<li>This will create a new zip file in the Topo folder.</li>
+	<li>Extract the zip file.</li>
+	<li>Compare the name of the Survey Geodatabase (not corrected) zip file matches <strong>EXACTLY</strong> with what is on champmonitoring.org. If it does not, the files will <strong>NOT</strong> load correctly.</li>
+	<li>If it does not, rename the survey geodatabase zip file to match what is on champmonitoring.org.</li>
+	<li>Select the four files in the folder and zip into a new file.</li>
+		<ul>
+			<li>publish.xml</li>
+			<li>Survey geodatabase zip file</li>
+			<li>TIN zip file</li>
+			<li>WSETIN zip file</li>
+		</ul>
+	<li>Upload new zip file to champmonitoring.org</li>
+	<li>In the <strong>Topographic Data</strong> dialog box, the Last Modified dates next to each of the 4 files you uploaded should change to the current date.</li>
+</ul>
