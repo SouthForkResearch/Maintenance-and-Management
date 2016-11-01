@@ -73,10 +73,6 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 		</ul>
 </ul>
 
-<h3>Open the Survey in Workflow Manager</h3>	
-
-<p>Once you have completed the steps above, you can open the visit in the Workflow Manager and run the Validate Data tool.</p>
-
 <h4>Other Missing tables</h4>
 <ul>
 	<li>Review the survey geodatabase for the following tables.</li>
@@ -93,6 +89,14 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 	<li>Copy any missing tables from another survey geodatabase from the same site or within the same watershed and remove any records they contain.</li>
 	<li>Check the QaQc tables for the <strong>TIMESTAMP</strong> field (Text, 30). Add if not present.</li>  
 </ul>
+
+<hr>
+
+<h3>Open the Survey in Workflow Manager</h3>	
+
+<p>Once you have completed the steps above, you can open the visit in the Workflow Manager and run the Validate Data tool.</p>
+
+
 
 <h4>Control_Points Feature Class Updates</h4>
 <ul>
@@ -139,8 +143,6 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 		</ul>
 </ul>
 	
-<hr>
-
 <h4>SurveyInfo Table Updates</h4>
 <ul>
 	<li>Open the Attribute Table and review field headings.</li>
