@@ -1,4 +1,4 @@
-<h2>CHaMP 2011 Visit Repair Process for Required Updates</h2>
+<h2>CHaMP 2013 Visit Repair Process for Required Updates</h2>
 <p>Date: November 4, 2016</br>
 Toolbar version: 6.0.19.0.</br>
 Created by: Jean M. Olson, South Fork Research, Inc.</p>
@@ -6,7 +6,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 
 <h3>Introduction</h3>
 
-<p>As the CHaMP project grows, updates to the data requirements necessitate changes to the tools. Previous surveys need to be brought up to current standards in order to facilitate metrics generation and continued use. The repairs listed below are for the 2011 surveys and will bring the survey up to the standards of the 2016 CHaMP toolbar version 6.0.19.0 and RBT Engine version 5.0.18.0. The repair process below is ordered to facilitate ease and lessen the chance of encountering errors. Please make sure you have the latest version of the CHaMP toolbar. Also, you should create a ReadME Text document listing the repairs you performed for each survey. Please note that these instructions assume a familiarity with ArcGIS and it's included Toolboxes.</p>
+<p>As the CHaMP project grows, updates to the data requirements necessitate changes to the tools. Previous surveys need to be brought up to current standards in order to facilitate metrics generation and continued use. The repairs listed below are for the 2013 surveys and will bring the survey up to the standards of the 2016 CHaMP toolbar version 6.0.19.0 and RBT Engine version 5.0.18.0. The repair process below is ordered to facilitate ease and lessen the chance of encountering errors. Please make sure you have the latest version of the CHaMP toolbar. Also, you should create a ReadME Text document listing the repairs you performed for each survey. Please note that these instructions assume a familiarity with ArcGIS and it's included Toolboxes.</p>
 
 <h3>Getting CHaMP data to Repair</h3>
 
@@ -53,62 +53,9 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 			
 <hr>	
 
-<h3>Repairs to do Before you Open the Survey with the CHaMP Toolbar</h3>
-
-<p>If the survey is from 2011 and has not been opened in a 2015 or 2016 toolbar version. The repairs listed below should be completed before you run any tools in the toolbar because some of the repairs listed below will prevent the several of the tools from running properly or may cause the CHaMP Toolbar or ArcMap to stop working.</p>
-
-<h4>Feature Class Renaming</h4>
-<ul>
-	<li>Rename Water_Extent feature class to WaterExtent.</li>
-	<li>Copy Habitat_Units feature class and rename to Channel_Units.</li>
-	<li>Channel_Units_Field feature class is missing. Copy Channel_Units and rename to Channel_Units_Field.</li>
-	<li>Breaklines feature class is missing.</li>
-		<ul>
-			<li>The Soft_Breaklines and Hard_Breaklines feature class are present.</li>
-			<li>Copy Hard_Breaklines feature class and rename to Breaklines.</li>
-			<li>Add field LineType (Text, 4).</li>
-			<li>Populate LineType field with <u>HARD</u>.</li>
-			<li>Append Soft_Breaklines to Breaklines feature class.</li>
-			<li>Populate LineType field with <u>SOFT</u>, where field value is null.</li>
-		</ul>
-</ul>
-
-<h4>Other Missing tables</h4>
-<ul>
-	<li>Review the survey geodatabase for the following tables.</li>
-		<ul>
-			<li>Log</li>
-			<li>OrthogInfo</li>
-			<li>QaQcLines</li>
-			<li>QaQcPoints</li>
-			<li>QaQcPolygons</li>
-			<li>QaQcSurvey</li>
-			<li>QaQcTIN</li>
-			<li>QaQcVector</li>
-		</ul>
-	<li>Copy any missing tables from another survey geodatabase from the same site or within the same watershed and remove any records they contain.</li>
-	<li>Check the QaQc tables for the <strong>TIMESTAMP</strong> field (Text, 30). Add if not present.</li>  
-</ul>
-
-<hr>
-
 <h3>Open the Survey in Workflow Manager</h3>	
 
-<p>Once you have completed the steps above, you can open the visit in the Workflow Manager.</p>
-
-
-
-<h4>Control_Points Feature Class Updates</h4>
-<ul>
-	<li>Open Attribute Table.</li>
-	<li>Add field: <strong>Type</strong> (Text, 10).</li>
-	<li>Populate field with one of the following values.</li>
-		<ul>
-			<li><u>Control</u> for code <strong>cp</strong></li>
-			<li><u>Benchmark</u> for code <strong>bm</strong></li>
-			<li><u>Backsight</u> for code <strong>bs</strong></li>
-		</ul>
-</ul>
+<p>Open the visit in the Workflow Manager to start the repair process.</p>
 
 <h4>Stream Features</h4>
 <ul>
@@ -125,24 +72,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 					<li>Description (Text, 10)</li>
 				</ul>
 		</ul>
-	<li>Check that the Stream_Features feature class is Z enabled.</li>
-		<ul>
-			<li>Add Stream_Features to the Control Panel</li>
-			<li>Right Click the feature class and select <strong>Properties</strong>.</li>
-			<li>On the <strong>Source</strong> tab, the Coordinates have Z Values: should be <strong>Yes</strong></li>
-			<li>If this is not the case, Use the Copy Features tool under the Data Management Tools, Features Toolbox to create a new feature class.</li>
-				<ul>
-					<li>Input Features: Stream_Features</li>
-					<li>Output Feature Class: Stream_Features_new</li>
-					<li>Environments: Z Values</li>
-					<li>Output has Z Values: Enabled</li>
-					<li>Click OK</li>
-				</ul>
-			<li>Rename Stream_Features to Stream_Features_orig.</li>
-			<li>Rename Stream_Features_new to Stream_Features.</li>
-		</ul>
-</ul>
-	
+</ul>	
 <h4>SurveyInfo Table Updates</h4>
 <ul>
 	<li>Open the Attribute Table and review field headings.</li>
@@ -212,7 +142,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 			<li>Add value Main or Side to the Channel field for line segments as appropriate.</li>
 		</ul>
 	<li>Start Editing lines.</li>
-	<li>Straighten top and bottom end of each line by removing vertices so Cross Sections in these areas are appropriate.</li>
+	<li>Straighten top and bottom end of each line by removing vertices so Cross Sections in these areas be appropriate.</li>
 	<li>Stop editing and save.</li>
 </ul>
 
@@ -326,7 +256,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 	<li>Early years (2011 to 2013) likely do not have a Centerline with correct side channel centerlines.</li>
 	<li>Review Channel_Units on champmonitoring.org under Visit/Measurements/Auxiliary Data/MeasurementType/Channel Unit. If more than one Channel Segment is present, there should be multiple Centerlines. Recreate.</li>
 	<li>If Qualifying Islands are present, then re-create Centerline.</li>
-	<li>Straighten ends of newly created lines by removing vertices so Cross Sections in these areas be appropriate.</li>
+	<li>Straighten ends of newly created lines by removing vertices so Cross Sections in these areas are appropriate.</li>
 </ul>
 
 <h4>WettedXS</h4>
