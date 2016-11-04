@@ -45,15 +45,17 @@
 	<li>Select option 3: <strong>Go to NHD Extracts by State</strong>.</li>
 	<li>Select the <strong>HighResolution</strong> folder.</li>
 	<li>Select the <strong>Shape</strong> folder.</li>
-	<li>Check the <strong>Last Modified</strong> date of the data you will be downloading. If it is more recent than your last download, get a new set of data. Otherwise, you can use the one you have.</li>
 	<li>Select the data by State code.</li>
 		<ul type='a'>
 			<li>Washington - 53</li>
 			<li>Oregon -41</li>
 			<li>Idaho - 16</li>
 		</ul>
-	<li>Click on the zip file and save.</li>
-	<li>This will take several minutes to download.</li>
+	<li>Check the <strong>Last Modified</strong> date of the data you will be downloading. If it is more recent than your last download, get a new set of data. Otherwise, you can use the one you have.</li>
+	<li>Click on the zip file and save. This will take several minutes to download.</li>
+	<li>Unzip the file and add the NHDFlowline shapefile to ArcGIS.</li>
+	<li>Clip the extent you wish to work with. <strong>Please Note:</strong> We recommend using a HUC 4 or 6 watershed to clip the hydrography depending on line density. If you try to work with a larger area, the time it takes to run the tools with increase dramatically.</li>
+	<li>Project the clipped network to UTM.</li>
 </ul>
 <hr>
 
