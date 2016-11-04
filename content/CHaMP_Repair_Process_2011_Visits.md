@@ -94,7 +94,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 
 <h3>Open the Survey in Workflow Manager</h3>	
 
-<p>Once you have completed the steps above, you can open the visit in the Workflow Manager and run the Validate Data tool.</p>
+<p>Once you have completed the steps above, you can open the visit in the Workflow Manager.</p>
 
 
 
@@ -148,26 +148,34 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 	<li>Open the Attribute Table and review field headings.</li>
 
 		<ul>
-			<li>Note: These 2 repairs should be automatically completed with toolbar version 6.0.19.0, however it is a good idea to double check that this occurred with your first survey.</li>
+			<li>Note: These 4 field additions should be automatically completed with toolbar version 6.0.19.0, however it is a good idea to double check that this occurred with your first survey.</li>
 			<li>If field <strong>Organziation</strong> is present.</li>
 				<ul>		
 					<li>Add new field: <strong>Organization</strong> (Text, 30).</li>
 					<li>Copy any information to the field Organization.</li>
 					<li>Delete field Organziation.</li>
 				</ul>
-			<li>Add the field: <strong>FinalWSETIN</strong> <Text, 50).</li>
+			<li>Add the field: <strong>FinalWSETIN</strong> (Text, 50).</li>
+			<li>Add the field: <strong>FieldSeason</strong> (Long).</li>
+			<li>Add the field: <strong>SurveyDate</strong> (Text, 20).</li>
 		</ul>
-	<li>Missing information in the SurveyInfo table.</li>
+	<li>Add missing information in the SurveyInfo table.</li>
 		<ul>
 			<li>Start Editing the table.</li>
 			<li>If there is not at least one record in the table, Click in the SiteID field to add one.</li>
-			<li>Add the Site name to the SiteID field.</li>
-			<li>Add Watershed name to the Watershed field.</li>
-			<li>Add the year the survey was done to the FieldSeason field.</li>
-			<li>Add the date of the survey to the SurveyDate field.</li>
+			<li>Add the Site name to the <strong>SiteID</strong> field.</li>
+			<li>Add Watershed name to the <strong>Watershed</strong> field.</li>
+			<li>Add the year the survey was done to the <strong>FieldSeason</strong> field.</li>
+			<li>Add the date of the survey to the <strong>SurveyDate</strong> field.</li>
 			<li>Stop Editing and Save</li>
 		</ul>
 </ul>
+
+<hr>
+
+<h3>Validate Data</h3>
+
+<p>Once the above repairs are completed, Run the Validate Data tool and repair based on the messages.</p>
 
 <h4>WaterExtent/Bankfull Updates</h4>
 <ul>
@@ -292,7 +300,23 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 <h4>WIslands</h4>
 <ul>
 	<li>Create if missing from geodatabase.</li>
-	<li>Recreate if Valid/Qualifying Wetted Islands should be accounted for but are not.</li>
+	<li>If WIslands are present or you created them, Review for correct Qualifying status.</li>
+		<ul>
+			<li>Add WaterExtent, EdgeofWater_Points and Centerline feature classes.</li>
+			<li>If <strong>mw</strong> points are present and there are not side channel lines in the Centerline feature class.</li>
+				<ul>
+					<li>Rerun the Created Wetted Centerline and Islands tool.</li>
+				</ul>
+			<li>If <strong>mw</strong> points are NOT present:</li>
+				<ul>
+					<li>Check champmonitoring.org on the Auxiliary Data tab in the Channel Unit table</li>
+						<ul>
+							<li>If field Segment Number contains a number greater than 1.</li>
+							<li>If field Segment Number for 2014 or newer visits contain a number greater than 1.</li>
+						</ul>
+					<li>Rerun the Created Wetted Centerline and Islands tool.</li>
+				</ul>
+		</ul>
 </ul>
 
 <h4>Centerline</h4>
@@ -332,7 +356,23 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 <h4>BIslands</h4>
 <ul>
 	<li>Create if missing from geodatabase.</li>
-	<li>Recreate if Valid/Qualifying Islands should be accounted for by BankfullCL but are not.</li>
+	<li>If BIslands are present or you created them, Review for correct Qualifying status.</li>
+		<ul>
+			<li>Add WaterExtent, EdgeofWater_Points and BankfullCL feature classes.</li>
+			<li>If <strong>mw</strong> points are present and there are not side channel lines in the BankfullCL feature class.</li>
+				<ul>
+					<li>Rerun the Created Bankfull Centerline and Islands tool.</li>
+				</ul>
+			<li>If <strong>mw</strong> points are NOT present:</li>
+				<ul>
+					<li>Check champmonitoring.org on the Auxiliary Data tab in the Channel Unit table</li>
+						<ul>
+							<li>If field Segment Number contains a number greater than 1.</li>
+							<li>If field Segment Number for 2014 or newer visits contain a number greater than 1.</li>
+						</ul>
+					<li>Rerun the Created Bankfull Centerline and Islands tool.</li>
+				</ul>
+		</ul>
 </ul>
 
 <h4>BankfullCL</h4>
