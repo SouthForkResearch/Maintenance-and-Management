@@ -167,6 +167,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 			<li>Add Watershed name to the <strong>Watershed</strong> field.</li>
 			<li>Add the year the survey was done to the <strong>FieldSeason</strong> field.</li>
 			<li>Add the date of the survey to the <strong>SurveyDate</strong> field.</li>
+			<li>Ad the visit id to the <strong>VisitID </strong> field.</li>
 			<li>Stop Editing and Save</li>
 		</ul>
 </ul>
