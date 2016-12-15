@@ -145,7 +145,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 	
 <h4>SurveyInfo Table Updates</h4>
 <ul>
-	<li>Open the Attribute Table and review field headings.</li>
+	<li>Open the Attribute Table and review for the following field headings, if they are not present add them.</li>
 
 		<ul>
 			<li>Note: These 4 field additions should be automatically completed with toolbar version 6.0.19.0, however it is a good idea to double check that this occurred with your first survey.</li>
@@ -159,7 +159,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 			<li>Add the field: <strong>FieldSeason</strong> (Long).</li>
 			<li>Add the field: <strong>SurveyDate</strong> (Text, 20).</li>
 		</ul>
-	<li>Add missing information in the SurveyInfo table.</li>
+	<li>If the following fields have missing information, add it from the values in the CHaMP Workbench.</li>
 		<ul>
 			<li>Start Editing the table.</li>
 			<li>If there is not at least one record in the table, Click in the SiteID field to add one.</li>
@@ -167,7 +167,6 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 			<li>Add Watershed name to the <strong>Watershed</strong> field.</li>
 			<li>Add the year the survey was done to the <strong>FieldSeason</strong> field.</li>
 			<li>Add the date of the survey to the <strong>SurveyDate</strong> field.</li>
-			<li>Ad the visit id to the <strong>VisitID </strong> field.</li>
 			<li>Stop Editing and Save</li>
 		</ul>
 </ul>
