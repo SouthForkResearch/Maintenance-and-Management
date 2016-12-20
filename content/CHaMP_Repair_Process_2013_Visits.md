@@ -191,7 +191,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 				<ul>
 					<li>If this message does not disappear once the DEM has been recreated you have 2 options.</li>
 					<li>If the offending point(s) is less than 20 cm from the DEM, move it onto the DEM. You will also need to move any corresponding Breaklines.</li>
-					<li>If the offending point(s) is more than 20 cm from the DEM, copy it to a new feature class called EdgeofWater_Points_remove. Then delete the points from the original EdgeofWater_points feature class.</li>
+					<li>If the offending point(s) is more than 20 cm from the DEM, copy it to a new feature class called EdgeofWater_Points_remove. Then delete the points from the original EdgeofWater_points feature class after you have finished all of the other repairs.</li>
 					<li>If you have moved any Breakline vertices, Run the Update Z Values for Breakline Vertices tool.</li>
 				</ul
 			<li>There is an DEM raster error in the Validate Data window.</li>

@@ -114,7 +114,7 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 				<ul>
 					<li>If this message does not disappear once the DEM has been recreated you have 2 options.</li>
 					<li>If the offending point(s) is less than 20 cm from the DEM, move it onto the DEM. You will also need to move any corresponding Breaklines.</li>
-					<li>If the offending point(s) is more than 20 cm from the DEM, copy it to a new feature class called EdgeofWater_Points_remove. Then delete the points from the original EdgeofWater_points feature class.</li>
+					<li>If the offending point(s) is more than 20 cm from the DEM, copy it to a new feature class called EdgeofWater_Points_remove. Then delete the points from the original EdgeofWater_points feature class after you have finished all of the other repairs.</li>
 					<li>If you have moved any Breakline vertices, Run the Update Z Values for Breakline Vertices tool.</li>
 				</ul
 			<li>There is an DEM raster error in the Validate Data window.</li>
@@ -248,6 +248,12 @@ Created by: Jean M. Olson, South Fork Research, Inc.</p>
 			<li>Water_Depth raster</li>
 		</ul>
 	<li>If they do not, edit the WaterExtent so they do and then recreate the rasters.</li>
+	<li>If you see an HRSEULT E_FAIL error and Topo_Points, POINT_QUALITY are listed in the error message.</li>
+		<ul>
+			<li>Line numbers: 1031, 79, 309, 83, 26, 256</li>
+			<li>Check the Topo_Points table for the POINT_QUALITY field.</li>
+			<li>If the field only contains <strong>null</strong> values, remove the POINT_QUALITY field from the Attribute Table.</li>
+		</ul>
 </ul>
 
 <h4>Current Warnings to ignore. These cannot be currently repaired.</h4>
