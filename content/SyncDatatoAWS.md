@@ -1,4 +1,4 @@
-<h2>Synce Data for RBT and Hydro Model runs to AWS</h2>
+<h2>Sync Data for RBT and Hydro Model runs to AWS</h2>
 <ol type = "1">
 	<li><u>Update Output file name</u> structure to match AWS.</li>
 		<ol type = "a">
