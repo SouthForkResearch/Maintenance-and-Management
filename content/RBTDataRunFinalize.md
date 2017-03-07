@@ -16,5 +16,6 @@
 			<li>If the run did not complete (e.g. the computer restarted), Type <strong>No</strong> in the Completed Successfully field.</li>
 			<li>If the run did complete (e.g. All the visits ran and some passed), Type <strong>Yes</strong> in the Completed Successfully field.</li>
 		</ol></li>
+	<li>Load the Workbench to <strong>\Dropbox\RBTWorkbenches\ServerRuns\</strong>.</li>
 	<li>Go to the <strong>SyncDatatoAWS</strong> document.</li>
 </ol>
