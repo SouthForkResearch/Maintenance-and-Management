@@ -90,7 +90,9 @@
 								</ul>
 							<li><strong>Topo Data Tab:</strong>
 								<ul>
-									<li>Leave Defaults</li>
+									<li>Leave Defaults except for the Survey Geodatabase name.</li>
+									<li>If you are using the orthogonal data, under the Survey GDB Search Patterns, Type: <strong>SurveyGDB.zip</strong></li>
+									<li>If you are using the crew data, under the Survey GDB Search Patterns, Type: <strong>CrewUploadedSurveyGDB.zip</strong></li>
 								</ul>
 							<li><strong>Hydraulic Model Data Tab:</strong></li>
 								<ul>
