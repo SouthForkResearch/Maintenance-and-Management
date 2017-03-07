@@ -1,19 +1,19 @@
 <h2>Run RBT Metrics</h2>
 <ol type = "1">
-	<li><u>Prep Visit list</u> to run</li>
+	<li><u>Prep Visit list</u> to run
 		<ol type = "a">
 			<li>You can run a single visit using one of the ways below.</li>
 				<ul>
 					<li>Type a Visit ID number in the Visit ID box.</li>
 					<li>Select a visit in the Workbench window.</li>
 				</ul>
-			<li>You can run by year and/or watershed for all visits.</li>
+			<li>You can run by year and/or watershed for all visits.
 				<ul>
 					<li>Select a year in the Field Season box to show all visits for that year in Workbench list.</li>
 					<li>Select a watershed in the Watersheds box to show all visits for that watershed in the Workbench list.</li>
 					<li>Select the first visit in the Workbench window, Hold the Shift key and Click the last visit in the Workbench window.</li>
 				</ul>
-			<li>You can run specific set of data from a csv file.</li>
+			<li>You can run specific set of data from a csv file.
 				<ul>
 					<li>Prep a csv visit list by using a text editor and type a list of comma separated visit numbers.</li>
 					<li><strong>Edit</strong> menu</li>
@@ -23,11 +23,11 @@
 					<li>Select the first visit in the Workbench window, Hold the Shift key and Click the last visit in the Workbench window.</li>
 				</ul>
 		</ol>
-	<li><u>Set the Options</u> for the running the tool.</li>
+	<li><u>Set the Options</u> for the running the tool.
 		<ol type = "a">
 			<li><strong>Menu:</strong> Tools</li>
 			<li><strong>Tool:</strong> Options</li>
-			<li>A dialog box will open</li>
+			<li>A dialog box will open
 				<ul>
 					<li>On the <strong>Folders</strong> tab:</li>
 					<li><strong>Monitoring data:</strong> D:\CHaMP\Processing\Visit_Data</li>
@@ -35,10 +35,10 @@
 					<li><strong>Temp workspace:</strong> D:\CHaMP\Processing\RBT_Temp</li>
 				</ul>
 		</ol>
-	<li><u>Set up the Run:</u></li>
+	<li><u>Set up the Run:</u>
 		<ol type = "a">
 			<li><strong>Menu:</strong> Tools</li>
-			<li><strong>RBT:</strong> Build the input files</li>
+			<li><strong>RBT:</strong> Build the input files
 				<ol type = "i">
 					<li>Add Validation to Batch Name</li>
 					<li>Check the Parent folder and Output folder to make sure they are pointing to the correct locations.</li>
@@ -57,20 +57,20 @@
 			<li>When the tool is finished a dialog box will open.</li>
 			<li>If any visits from your list fail, they will appear in the dialog box.</li>
 		</ol>
-	<li><u>Run RBT:</u></li> 
+	<li><u>Run RBT:</u> 
 		<ol type = "a">
-			<li><strong>Menu:</strong> Tools</li>
+			<li><strong>Menu:</strong> Tools
 				<ol type = "i">
-					<li><strong>RBT:</strong> Select Batches to Run....</li>
+					<li><strong>RBT:</strong> Select Batches to Run....
 						<ul>
 							<li>A dialog box will open.</li>
 							<li>Select the Batch you want to run.</li>
 							<li>Click OK.</li>
 						</ul>
 				</ol>
-			<li><strong>Menu:</strong> Tools</li>
+			<li><strong>Menu:</strong> Tools
 				<ol type = "a">
-					<li><strong>RBT:</strong> Run Selected Batches....</li>
+					<li><strong>RBT:</strong> Run Selected Batches....
 						<ol type = "i">
 							<li>A dialog box will open.</li>
 							<li>Check Metrics results.</li>
@@ -83,9 +83,9 @@
 	<li><u>Review Results</u>
 		<ol type = "a">
 			<li>Open the Workbench database</li>
-			<li>Open the <strong>LogFiles</strong> table.</li>
+			<li>Open the <strong>LogFiles</strong> table.
 				<ol type = "i">
-					<li>The Status field will contain one of the following.</li>
+					<li>The Status field will contain one of the following.
 						<ul>
 							<li><strong>Success</strong> The visit has passed metrics successfully.</li>
 							<li><strong>Validation Fail</strong> The visit failed metrics.</li>
@@ -96,10 +96,10 @@
 					<li>Create a list of visits which failed for non-metrics reasons and their LogIDs</li>
 					<li>For the errors open the LogMessages table.</li>		
 				</ol>	
-			<li>Open the <strong>LogMessages</strong> table.</li>
+			<li>Open the <strong>LogMessages</strong> table.
 				<ol type = "i">
 					<li>This table will have the reasons for the failures in the <strong>LogMessage</strong> field.</li>
-					<li>The <strong>LogSeverity</strong> field contains:</li>
+					<li>The <strong>LogSeverity</strong> field contains:
 						<ul>
 							<li><strong>info</strong> General information about the run.</li>
 							<li><strong>error</strong> Gives a message about what feature class or raster caused the failure.</li>
@@ -108,4 +108,5 @@
 				</ol>
 			<li>Errors need to be repaired and RBT Metrics re-run before loading the results to AWS.</li>
 		</ol>
+	<li>Go to the <strong>RBTDataRunFinalize</strong> document.</li>
 </ol>
