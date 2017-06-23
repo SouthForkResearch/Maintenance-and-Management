@@ -4,11 +4,14 @@
 
 Notes: 
 Process one year of data at a time.
+
 	
 ### Steps:
-1. Copy the year folder to run to c:\Visit_DataForHarold folder.
-2. In the Windows Start Menu Type: <strong>cmd</strong> to open a command window.
-3. Type `python`, the path to the tool, the input data folder path and name, the output folder path and name, the batch log file path, and the list of visits to run (optional). For example:
+1. Pull Harold Code from XXXX  
+2. Pull CrewUploadedSurveyGDB.zip from AWS to a folder on c:  
+3. Unzip CrewUploadedSurveyGDB.zip to Visit_DataForHarold  
+4. In the Windows Start Menu Type: <strong>cmd</strong> to open a command window.
+5. Type `python`, the path to the tool, the input data folder path and name, the output folder path and name, the batch log file path, and the list of visits to run (optional). For example:
 	
 `python "C:\GIS\Tools\CHaMP_Survey_Data_Export_Tool\BatchExport.py" C:\CHaMP\Processing\Visit_DataForHarold C:\SurveyDataExportFiles\CHaMP C:\SurveyDataExportFiles\BatchLog.txt C:\VisitRunLists\DET_CHaMP_AL_yyyymmdd.csv)`
 	
@@ -19,8 +22,8 @@ Output folder: `C:\SurveyDataExportFiles\CHaMP`
 Batch Log file path: `C:\SurveyDataExportFiles\BatchLog.txt`  
 List of Visits to run: `C:\VisitRunLists\DET_CHaMP_AL_yyyymmdd.csv`  
 				
-4. Hit Enter
-5. The exported data will be located in the \year\watershed\site name\Visit_xxxx\Topo\GISLayers\
+6. Hit Enter
+7. The exported data will be located in the \year\watershed\site name\Visit_xxxx\Topo\GISLayers\
 
 ### Uploading Data to AWS  
 6.  Double Click on the CHaMP_Upload_SurveyExport.bat file.  The script will show a prompt when it is finished.
