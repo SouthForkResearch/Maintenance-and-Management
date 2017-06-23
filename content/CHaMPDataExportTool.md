@@ -7,7 +7,7 @@ Process one year of data at a time.
 
 	
 ### Steps:
-1. Pull Harold Code from XXXX  
+1. Pull Harold Code from [Survey Data Export](https://github.com/SouthForkResearch/CHaMP_Survey_Project_Export) repository.
 2. Pull CrewUploadedSurveyGDB.zip from AWS to a folder on c:  
 3. Unzip CrewUploadedSurveyGDB.zip to Visit_DataForHarold  
 4. In the Windows Start Menu Type: <strong>cmd</strong> to open a command window.
