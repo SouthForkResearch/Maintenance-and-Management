@@ -3,12 +3,16 @@
 <p>This tool takes the expected feature classes from a CHaMP Survey Geodatabase and exports them to shapefiles. It also takes all expected rasters and exports them to tiff files. It will not include any feature classes or rasters which are copies and have a slightly different name than the original data.</p>
 
 <ol type = "1">
-	<li>We recommend that you process the data one year at a time.</li>
-	<li>Copy the year folder you wish to run to a Visit_DataForHarold folder.</li>
+	Notes: 
+	<li>Process one year of data at a time.</li>
+	
+	Steps:
+	
+	<li>Copy the year folder to run to c:\Visit_DataForHarold folder.</li>
 	<li>In the Windows Start Menu.
 		<ol type = "i">
 			<li>Type: <strong>cmd</strong> to open a command window.</li>
-			<li>Type or copy from another source the path to the tool. </br>
+			<li>Type the path to the tool. </br>
 				(<strong>Example:</strong> python D:\Tools\CHaMP_Survey_Data_Export_Tool\BatchExport.py D:\CHaMP\Processing\Visit_DataForHarold D:\SurveyDataExportFiles\CHaMP D:\SurveyDataExportFiles\BatchLog.txt D:\VisitRunLists\DET_CHaMP_AL_yyyymmdd.csv)</li>
 			<li>Parts of tool path (example):
 				<ol type = "a">
