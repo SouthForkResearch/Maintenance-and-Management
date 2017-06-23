@@ -26,5 +26,5 @@ List of Visits to run: `C:\VisitRunLists\DET_CHaMP_AL_yyyymmdd.csv`
 7. The exported data will be located in the \year\watershed\site name\Visit_xxxx\Topo\GISLayers\
 
 ### Uploading Data to AWS  
-6.  Double Click on the CHaMP_Upload_SurveyExport.bat file.  The script will show a prompt when it is finished.
+8.  Double Click on the CHaMP_Upload_SurveyExport.bat file.  The script will show a prompt when it is finished.
 
